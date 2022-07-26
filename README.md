@@ -32,45 +32,7 @@ I use the below shortcuts in my cards:
 | "z" | backward 3 seconds |
 | "x" | forward 3 seconds |
 
-To apply this settings go to "Cards" -> "Templates" and paste the following code:
-```html
-<h1>{{Tags}}</h1>
-{{Front}}
-
-<p>
-  
-</p>
-<script>
-	const execute = function(e) {
-        document.querySelector('p').textContent = e.key;        		
-
-        if (e.key === "w") {
-            document.querySelector('video').playbackRate += 0.25;
-            document.querySelector("p").textContent = document.querySelector("video").playbackRate.toFixed(2) + "x";
-        }
-        if (e.key === "q") {
-            document.querySelector('video').playbackRate -= 0.25;
-            document.querySelector("p").textContent = document.querySelector("video").playbackRate.toFixed(2) + "x";
-        }
-        if (e.key === "z") {
-            document.querySelector('video').currentTime -= 3;
-        }
-        if (e.key === "x") {
-            document.querySelector('video').currentTime += 3;
-        }
-        if (e.key === "`") {
-            if (document.querySelector('video').paused) {
-            document.querySelector('video').play();
-        }
-        else {
-            document.querySelector('video').pause();
-        } 
-    }
-}
-               
-    document.addEventListener("keypress",execute);
-</script>
-```
+To apply this settings go to "Cards" -> "Templates" and paste the code in "templates.html" above.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Original description:
