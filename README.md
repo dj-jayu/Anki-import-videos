@@ -12,7 +12,9 @@ embeded videos for some reason).
 Anki documentation for addons is pretty bad, so I couldn't understand everything in the original code, but it was enough to do the modifications
 I needed.
 
-[Link to original add-on](https://ankiweb.net/shared/info/1531997860)
+[Link to original add-on at ankiweb](https://ankiweb.net/shared/info/1531997860)
+
+[Github of the original addon](https://github.com/hssm/media-import)
 
 I haven't published the addon in the anki website yet.
 
