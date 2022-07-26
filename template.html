@@ -1,0 +1,50 @@
+<!-- Add this code to the template of the anki card that contains the videos imported 
+in order to be able to use the commands below -->
+
+<h1>{{Tags}}</h1>
+{{Front}}
+
+<p>
+  
+</p>
+<script>
+	const execute = function(e) {
+    
+//      show the key pressed (so we are sure the script is working)
+        document.querySelector('p').textContent = e.key;
+    
+//      accelerate video by 0.25x
+        if (e.key === "w") {
+            document.querySelector('video').playbackRate += 0.25;
+            document.querySelector("p").textContent = document.querySelector("video").playbackRate.toFixed(2) + "x";
+        }
+    
+//      slow video by 0.25x
+        if (e.key === "q") {
+            document.querySelector('video').playbackRate -= 0.25;
+            document.querySelector("p").textContent = document.querySelector("video").playbackRate.toFixed(2) + "x";
+        }
+    
+//      go 3 seconds back
+        if (e.key === "z") {
+            document.querySelector('video').currentTime -= 3;
+        }
+    
+//      forward 3 seconds
+        if (e.key === "x") {
+            document.querySelector('video').currentTime += 3;
+        }
+    
+//      play/pause the video
+        if (e.key === "`") {
+            if (document.querySelector('video').paused) {
+            document.querySelector('video').play();
+        }     
+        else {
+            document.querySelector('video').pause();
+        } 
+    }
+}
+               
+    document.addEventListener("keypress",execute);
+</script>
